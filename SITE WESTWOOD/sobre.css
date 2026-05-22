@@ -1,0 +1,456 @@
+body {
+  margin: 0;
+  background: white;
+  font-family: Arial;
+  padding-top: 30px;
+}
+
+/* TOP BAR */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  background: black;
+  color: white;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.top-text {
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 15s linear infinite;
+  font-size: 20px;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* HEADER LOGO IGUAL HOME */
+.main-header {
+  position: fixed;
+  top: 30px;
+  left: -20px;
+  z-index: 10;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left:-20px;
+  z-index: 10;
+}
+/* MENU IGUAL HOME */
+nav {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+
+  display: flex;
+  gap: 50px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  color: rgb(240, 8, 8);
+}
+
+/* FADE SOUS LE HEADER IGUAL HOME */
+body::before {
+  content: "";
+  position: fixed;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+
+  background: linear-gradient(
+    to bottom,
+    white 60%,
+    rgba(255,255,255,0)
+  );
+
+  z-index: 9;
+  pointer-events: none;
+}
+
+/* ICONS NAV DROITE IGUAL HOME */
+.nav-icons {
+  position: fixed;
+  top: 55px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  z-index: 15;
+}
+
+.nav-icons i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-icons i:hover {
+  color: red;
+}
+
+/* PANIER */
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+/* HERO SOBRE */
+.hero {
+  min-height: 520px;
+  padding: 170px 70px 80px;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.45)
+  ),
+  url("img/west-origens.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.hero-text h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin: 20px 0;
+  font-weight: 800;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+/* MAIN */
+main {
+  background: white;
+}
+
+/* SECTIONS GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 90px 70px;
+}
+
+.grid.reverse .text-block {
+  order: 2;
+}
+
+.grid.reverse .img-block {
+  order: 1;
+}
+
+.grid.highlight {
+  background: #f5f5f5;
+}
+
+/* TEXTOS */
+.text-block h2 {
+  font-size: 38px;
+  margin: 15px 0 25px;
+  color: black;
+}
+
+.text-block h3 {
+  font-size: 22px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.text-block p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+/* IMAGENS */
+.img-block {
+  overflow: hidden;
+  border-radius: 35px;
+}
+
+.img-block img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.img-block img:hover {
+  transform: scale(1.06);
+}
+
+/* FOOTER FULL WIDTH */
+.footer {
+  width: 95%;
+  background: black;
+  color: white;
+  padding: 10px 40px 20px;
+}
+
+/* CONTENU INTERNE */
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* LOGO + TEXTE */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* ICÔNES */
+.footer-socials i {
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s ease;
+  opacity: 0.7;
+}
+
+/* HOVER PREMIUM */
+.footer-socials i:hover {
+  opacity: 1;
+  color: red;
+  transform: translateY(-4px) scale(1.2);
+}
+
+/* TITRES */
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* LIENS */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer ul li:hover {
+  color: red;
+  transform: translateX(3px);
+}
+
+/* PAIEMENT */
+.footer-payments {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-payments img {
+  width: 40px;
+  height: 28px;
+  object-fit: contain;
+  background: white;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* BAS FOOTER */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav {
+    gap: 25px;
+  }
+
+  nav a {
+    margin-left: 10px;
+  }
+
+  .hero {
+    padding: 150px 40px 70px;
+  }
+
+  .hero-text h1 {
+    font-size: 42px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 70px 40px;
+  }
+
+  .grid.reverse .text-block,
+  .grid.reverse .img-block {
+    order: initial;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-text {
+    font-size: 14px;
+  }
+
+  nav {
+    gap: 12px;
+    top: 65px;
+  }
+
+  nav a {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .nav-icons {
+    right: 15px;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 150px 25px 60px;
+    min-height: 430px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+  .grid {
+    padding: 50px 25px;
+    gap: 35px;
+  }
+
+  .text-block h2 {
+    font-size: 30px;
+  }
+
+  .text-block p {
+    font-size: 16px;
+  }
+
+  .img-block img {
+    height: 330px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-payments {
+    justify-content: center;
+  }
+}

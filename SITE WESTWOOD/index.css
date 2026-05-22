@@ -1,0 +1,828 @@
+body {
+  margin: 0;
+  background: rgba(83, 75, 75, 0.116);
+  font-family: Arial;
+  padding-top: 30px; /* pour la top bar */
+}
+
+/* TOP BAR */
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  background: black;
+  color: white;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.top-text {
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 15s linear infinite;
+  font-size: 20px;
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 30px;
+  left: -20px;
+  z-index: 10;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo {
+  position: fixed;
+  top: 10px;
+  left:-20px;
+  z-index: 10;
+}
+
+/* MENU */
+nav {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%); /* 🔥 centrage parfait */
+  z-index: 10;
+
+  display: flex;
+  gap: 50px; /* espace entre liens */
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: rgb(240, 8, 8);
+}
+nav a:hover,
+nav a.active {
+  color: rgb(240, 8, 8);
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* TEXTE DERRIÈRE */
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  font-size: 220px;
+  font-weight: 900;
+  letter-spacing: 20px;
+
+  color: rgba(0, 0, 0, 0.267);
+  white-space: nowrap;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* IMAGE */
+.slide {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+
+  object-fit: contain;
+
+  opacity: 0;
+  animation: fade 25s infinite;
+
+  z-index: 2;
+}
+
+/* DELAYS */
+.s1 { animation-delay: 0s; }
+.s2 { animation-delay: 5s; }
+.s3 { animation-delay: 10s; }
+.s4 { animation-delay: 15s; }
+.s5 { animation-delay: 20s; }
+
+/* ANIMATION */
+@keyframes fade {
+  0%   { opacity: 0; }
+  5%   { opacity: 1; }
+  20%  { opacity: 1; }
+  25%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* SEARCH */
+.search-elite {
+  position: relative;
+  z-index: 5;
+
+  width: 80px;
+  height: 60px;
+  margin: 80px auto;
+  border-radius: 50px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* input caché */
+.search-elite input {
+  position: absolute;
+  left: 20px;
+  width: 0;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #111;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+/* bouton */
+.search-elite button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: #111;
+  color: red;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.search-elite button:hover {
+  background: red;
+  color: white;
+}
+
+/* ouverture */
+.search-elite:hover {
+  width: 700px;
+  background: #f3f3f3;
+  box-shadow: 0 0 20px rgba(255,0,0,0.3);
+}
+
+.search-elite:hover input {
+  width: 70%;
+  opacity: 1;
+  color: #333;
+}
+
+.search-elite {
+  margin-top: 0px;
+}
+
+/* TEXTE GAUCHE (principal) */
+.hero-main {
+  position: absolute;
+  left: 50px;
+  bottom: 10px;
+  z-index: 3;
+}
+
+.hero-main h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.hero-main p {
+  font-size: 18px;
+  margin: 5px 0 15px;
+}
+
+/* TEXTE DROITE (petit) */
+.hero-side {
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  text-align: right;
+  z-index: 3;
+}
+
+.hero-side p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* ligne rouge */
+.hero-side .line {
+  display: block;
+  width: 120px;
+  height: 2px;
+  background: red;
+  margin-left: auto;
+}
+
+/* bouton */
+.shop-btn {
+  padding: 12px 28px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.shop-btn:hover {
+  background: red;
+  transform: translateX(5px);
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f5f5f5;
+  padding: 20px 0;
+  margin-top: 50px;
+  height: 70px;
+
+  /* 🔥 FIX AJOUTÉ */
+  position: relative;
+  margin-top: -60px;
+}
+
+/* chaque bloc */
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* icônes */
+.feature i {
+  font-size: 22px;
+  color: black;
+}
+
+/* titres */
+.feature h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* description */
+.feature p {
+  margin: 0;
+  font-size: 15px;
+  color: gray;
+}
+
+/* séparation */
+.feature:not(:last-child) {
+  border-right: 1px solid #ddd;
+  padding-right: 30px;
+}
+/* FADE SOUS LE HEADER */
+body::before {
+  content: "";
+  position: fixed;
+  top: 45px; /* hauteur de la top-bar */
+  left: 0;
+  width: 100%;
+  height: 120px;
+
+  background: linear-gradient(
+    to bottom,
+    white 60%,
+    rgba(255,255,255,0)
+  );
+
+  z-index: 9; /* juste sous le header/nav */
+  pointer-events: none;
+}
+
+/* ICONS NAV DROITE */
+.nav-icons {
+  position: fixed;
+  top: 55px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  z-index: 15;
+}
+
+/* icônes */
+.nav-icons i {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-icons i:hover {
+  color: red;
+}
+
+/* panier */
+.cart {
+  position: relative;
+}
+
+/* badge rouge */
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+/* SECTION */
+.categories {
+  padding: 10px;
+}
+
+.categories h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+/* GRID */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARD */
+.cat {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* IMAGE */
+.cat img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+/* 🔥 OVERLAY SOMBRE */
+.cat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2)
+  );
+  z-index: 1;
+}
+
+/* TEXTE */
+.overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  color: white;
+}
+
+/* TITRE */
+.overlay h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* VER MAIS */
+.overlay span {
+  font-size: 12px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+/* 🔥 HOVER IMAGE */
+.cat:hover img {
+  transform: scale(1.1);
+}
+
+/* 🔥 HOVER TEXTE */
+.cat:hover span {
+  color: red;
+  transform: translateX(5px);
+}
+
+/* 🔥 petit effet glow */
+.cat:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.3)
+  );
+}
+
+.produtos {
+  padding: 40px;
+}
+
+/* header */
+.produtos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produtos-header h2 {
+  font-size: 20px;
+}
+
+/* tabs */
+.tabs span {
+  margin-left: 20px;
+  cursor: pointer;
+  color: gray;
+}
+
+.tabs .active {
+  color: black;
+  border-bottom: 2px solid red;
+}
+
+/* grid */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* card produit */
+.produto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #252424;
+}
+
+.produto p {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.produto span {
+  color: red; /* 🔥 prix en rouge */
+  font-weight: bold;
+}
+
+/* bouton */
+.ver-todos {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.ver-todos button {
+  background: black;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.ver-todos button:hover {
+  background: red;
+}
+
+.produto {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* image */
+.produto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+/* 🔥 zoom image */
+.produto:hover img {
+  transform: scale(1.08);
+}
+
+/* produit comme categorias */
+.produto {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* overlay sombre comme categorias */
+.produto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.2)
+  );
+  z-index: 1;
+  transition: 0.4s;
+}
+
+/* texte au dessus */
+.produto p,
+.produto span {
+  position: absolute;
+  left: 15px;
+  z-index: 2;
+  color: white;
+}
+
+/* nom produit */
+.produto p {
+  bottom: 35px;
+  margin: 0;
+}
+
+/* prix */
+.produto span {
+  bottom: 10px;
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* image */
+.produto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+/* hover zoom */
+.produto:hover img {
+  transform: scale(1.1);
+}
+
+/* hover overlay plus dark */
+.produto:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.3)
+  );
+}
+
+.banner {
+  position: relative;
+  margin: 60px 40px;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-top: 0px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.banner-content h2 {
+  font-size: 40px;
+  margin: 0;
+  letter-spacing: 3px;
+}
+
+.banner-content p {
+  color: red;
+  margin: 10px 0;
+}
+
+.banner-content button {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.banner-content button:hover {
+  background: red;
+  color: white;
+}
+
+.instagram {
+  text-align: center;
+  margin: 60px 40px;
+}
+
+.instagram h3 {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.insta-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.insta-grid img:hover {
+  transform: scale(1.05);
+}
+
+.insta-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+.insta-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* FOOTER FULL WIDTH */
+.footer {
+  width: 95%;
+  background: black;
+  color: white;
+  padding: 10px 40px 20px;
+}
+
+/* CONTENU INTERNE */
+.footer-container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* LOGO + TEXTE */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-brand img {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* SOCIALS */
+.footer-socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* ICÔNES */
+.footer-socials i {
+  font-size: 20px;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s ease;
+  opacity: 0.7;
+}
+
+/* 🔥 HOVER PREMIUM */
+.footer-socials i:hover {
+  opacity: 1;
+  color: red;
+  transform: translateY(-4px) scale(1.2);
+}
+
+/* TITRES */
+.footer h4 {
+  margin-bottom: 15px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* LIENS */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #aaa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer ul li:hover {
+  color: red;
+  transform: translateX(3px);
+}
+
+/* PAIEMENT */
+.footer-payments img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* BAS FOOTER */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    align-items: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
