@@ -2,10 +2,10 @@ body {
   margin: 0;
   background: rgba(83, 75, 75, 0.116);
   font-family: Arial;
-  padding-top: 30px; /* pour la top bar */
+  padding-top: 30px;   
 }
 
-/* TOP BAR */
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ body {
   100% { transform: translateX(-100%); }
 }
 
-/* HEADER */
+  
 header {
   position: fixed;
   top: 30px;
@@ -51,16 +51,16 @@ header {
   z-index: 10;
 }
 
-/* MENU */
+replace
 nav {
   position: fixed;
   top: 60px;
   left: 50%;
-  transform: translateX(-50%); /* 🔥 centrage parfait */
+  transform: translateX(-50%);   
   z-index: 10;
 
   display: flex;
-  gap: 50px; /* espace entre liens */
+  gap: 50px;   
 }
 
 nav a {
@@ -78,7 +78,7 @@ nav a.active {
   color: rgb(240, 8, 8);
 }
 
-/* SLIDER */
+  
 .slider {
   position: relative;
   width: 100%;
@@ -86,7 +86,7 @@ nav a.active {
   overflow: hidden;
 }
 
-/* TEXTE DERRIÈRE */
+  
 .bg-text {
   position: absolute;
   top: 50%;
@@ -104,7 +104,7 @@ nav a.active {
   z-index: 1;
 }
 
-/* IMAGE */
+  
 .slide {
   position: absolute;
   top: 65%;
@@ -123,14 +123,14 @@ nav a.active {
   z-index: 2;
 }
 
-/* DELAYS */
+  
 .s1 { animation-delay: 0s; }
 .s2 { animation-delay: 5s; }
 .s3 { animation-delay: 10s; }
 .s4 { animation-delay: 15s; }
 .s5 { animation-delay: 20s; }
 
-/* ANIMATION */
+  
 @keyframes fade {
   0%   { opacity: 0; }
   5%   { opacity: 1; }
@@ -139,7 +139,7 @@ nav a.active {
   100% { opacity: 0; }
 }
 
-/* SEARCH */
+  
 .search-elite {
   position: relative;
   z-index: 5;
@@ -157,7 +157,7 @@ nav a.active {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-/* input caché */
+  
 .search-elite input {
   position: absolute;
   left: 20px;
@@ -171,7 +171,7 @@ nav a.active {
   transition: 0.4s;
 }
 
-/* bouton */
+  
 .search-elite button {
   width: 60px;
   height: 60px;
@@ -189,7 +189,7 @@ nav a.active {
   color: white;
 }
 
-/* ouverture */
+  
 .search-elite:hover {
   width: 700px;
   background: #f3f3f3;
@@ -206,7 +206,7 @@ nav a.active {
   margin-top: 0px;
 }
 
-/* TEXTE GAUCHE (principal) */
+  
 .hero-main {
   position: absolute;
   left: 50px;
@@ -224,7 +224,7 @@ nav a.active {
   margin: 5px 0 15px;
 }
 
-/* TEXTE DROITE (petit) */
+  
 .hero-side {
   position: absolute;
   right: 50px;
@@ -238,7 +238,7 @@ nav a.active {
   margin-bottom: 5px;
 }
 
-/* ligne rouge */
+  
 .hero-side .line {
   display: block;
   width: 120px;
@@ -247,7 +247,7 @@ nav a.active {
   margin-left: auto;
 }
 
-/* bouton */
+  
 .shop-btn {
   padding: 12px 28px;
   background: black;
@@ -265,7 +265,7 @@ nav a.active {
   transform: translateX(5px);
 }
 
-/* FEATURES */
+  
 .features {
   display: flex;
   justify-content: space-around;
@@ -275,48 +275,48 @@ nav a.active {
   margin-top: 50px;
   height: 70px;
 
-  /* 🔥 FIX AJOUTÉ */
+    
   position: relative;
   margin-top: -60px;
 }
 
-/* chaque bloc */
+  
 .feature {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* icônes */
+  
 .feature i {
   font-size: 22px;
   color: black;
 }
 
-/* titres */
+  
 .feature h4 {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
 }
 
-/* description */
+  
 .feature p {
   margin: 0;
   font-size: 15px;
   color: gray;
 }
 
-/* séparation */
+  
 .feature:not(:last-child) {
   border-right: 1px solid #ddd;
   padding-right: 30px;
 }
-/* FADE SOUS LE HEADER */
+  
 body::before {
   content: "";
   position: fixed;
-  top: 45px; /* hauteur de la top-bar */
+  top: 45px;   
   left: 0;
   width: 100%;
   height: 120px;
@@ -327,11 +327,11 @@ body::before {
     rgba(255,255,255,0)
   );
 
-  z-index: 9; /* juste sous le header/nav */
+  z-index: 9;   
   pointer-events: none;
 }
 
-/* ICONS NAV DROITE */
+  
 .nav-icons {
   position: fixed;
   top: 55px;
@@ -342,7 +342,7 @@ body::before {
   z-index: 15;
 }
 
-/* icônes */
+  
 .nav-icons i {
   font-size: 22px;
   cursor: pointer;
@@ -353,12 +353,12 @@ body::before {
   color: red;
 }
 
-/* panier */
+  
 .cart {
   position: relative;
 }
 
-/* badge rouge */
+  
 .cart-count {
   position: absolute;
   top: -8px;
@@ -371,7 +371,7 @@ body::before {
   border-radius: 50%;
 }
 
-/* SECTION */
+  
 .categories {
   padding: 10px;
 }
@@ -383,14 +383,14 @@ body::before {
   letter-spacing: 1px;
 }
 
-/* GRID */
+  
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
-/* CARD */
+  
 .cat {
   position: relative;
   height: 220px;
@@ -398,7 +398,7 @@ body::before {
   cursor: pointer;
 }
 
-/* IMAGE */
+  
 .cat img {
   width: 100%;
   height: 100%;
@@ -406,7 +406,7 @@ body::before {
   transition: 0.6s ease;
 }
 
-/* 🔥 OVERLAY SOMBRE */
+  
 .cat::before {
   content: "";
   position: absolute;
@@ -419,7 +419,7 @@ body::before {
   z-index: 1;
 }
 
-/* TEXTE */
+  
 .overlay {
   position: absolute;
   bottom: 20px;
@@ -428,32 +428,32 @@ body::before {
   color: white;
 }
 
-/* TITRE */
+  
 .overlay h3 {
   margin: 0;
   font-size: 22px;
   font-weight: bold;
 }
 
-/* VER MAIS */
+  
 .overlay span {
   font-size: 12px;
   opacity: 0.8;
   transition: 0.3s;
 }
 
-/* 🔥 HOVER IMAGE */
+  
 .cat:hover img {
   transform: scale(1.1);
 }
 
-/* 🔥 HOVER TEXTE */
+  
 .cat:hover span {
   color: red;
   transform: translateX(5px);
 }
 
-/* 🔥 petit effet glow */
+  
 .cat:hover::before {
   background: linear-gradient(
     to top,
@@ -466,7 +466,7 @@ body::before {
   padding: 40px;
 }
 
-/* header */
+  
 .produtos-header {
   display: flex;
   justify-content: space-between;
@@ -477,7 +477,7 @@ body::before {
   font-size: 20px;
 }
 
-/* tabs */
+  
 .tabs span {
   margin-left: 20px;
   cursor: pointer;
@@ -489,7 +489,7 @@ body::before {
   border-bottom: 2px solid red;
 }
 
-/* grid */
+  
 .produtos-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -497,7 +497,7 @@ body::before {
   margin-top: 20px;
 }
 
-/* card produit */
+  
 .produto img {
   width: 100%;
   height: 250px;
@@ -511,11 +511,11 @@ body::before {
 }
 
 .produto span {
-  color: red; /* 🔥 prix en rouge */
+  color: red;   
   font-weight: bold;
 }
 
-/* bouton */
+  
 .ver-todos {
   text-align: center;
   margin-top: 30px;
@@ -538,7 +538,7 @@ body::before {
   cursor: pointer;
 }
 
-/* image */
+  
 .produto img {
   width: 100%;
   height: 250px;
@@ -546,19 +546,19 @@ body::before {
   transition: 0.4s ease;
 }
 
-/* 🔥 zoom image */
+  
 .produto:hover img {
   transform: scale(1.08);
 }
 
-/* produit comme categorias */
+  
 .produto {
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 
-/* overlay sombre comme categorias */
+  
 .produto::before {
   content: "";
   position: absolute;
@@ -572,7 +572,7 @@ body::before {
   transition: 0.4s;
 }
 
-/* texte au dessus */
+  
 .produto p,
 .produto span {
   position: absolute;
@@ -581,13 +581,13 @@ body::before {
   color: white;
 }
 
-/* nom produit */
+  
 .produto p {
   bottom: 35px;
   margin: 0;
 }
 
-/* prix */
+  
 .produto span {
   bottom: 10px;
   background: red;
@@ -595,7 +595,7 @@ body::before {
   border-radius: 5px;
 }
 
-/* image */
+  
 .produto img {
   width: 100%;
   height: 250px;
@@ -603,12 +603,12 @@ body::before {
   transition: 0.5s ease;
 }
 
-/* hover zoom */
+  
 .produto:hover img {
   transform: scale(1.1);
 }
 
-/* hover overlay plus dark */
+  
 .produto:hover::before {
   background: linear-gradient(
     to top,
@@ -705,7 +705,7 @@ body::before {
   color: white;
 }
 
-/* FOOTER FULL WIDTH */
+  
 .footer {
   width: 95%;
   background: black;
@@ -713,7 +713,7 @@ body::before {
   padding: 10px 40px 20px;
 }
 
-/* CONTENU INTERNE */
+  
 .footer-container {
   max-width: 1400px;
   margin: auto;
@@ -723,7 +723,7 @@ body::before {
   gap: 40px;
 }
 
-/* LOGO + TEXTE */
+  
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -741,14 +741,14 @@ body::before {
   line-height: 1.5;
 }
 
-/* SOCIALS */
+  
 .footer-socials {
   display: flex;
   gap: 18px;
   margin-top: 20px;
 }
 
-/* ICÔNES */
+  
 .footer-socials i {
   font-size: 20px;
   color: #aaa;
@@ -757,21 +757,21 @@ body::before {
   opacity: 0.7;
 }
 
-/* 🔥 HOVER PREMIUM */
+  
 .footer-socials i:hover {
   opacity: 1;
   color: red;
   transform: translateY(-4px) scale(1.2);
 }
 
-/* TITRES */
+  
 .footer h4 {
   margin-bottom: 15px;
   font-size: 14px;
   letter-spacing: 1px;
 }
 
-/* LIENS */
+  
 .footer ul {
   list-style: none;
   padding: 0;
@@ -790,13 +790,13 @@ body::before {
   transform: translateX(3px);
 }
 
-/* PAIEMENT */
+  
 .footer-payments img {
   width: 40px;
   margin-right: 10px;
 }
 
-/* BAS FOOTER */
+  
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -804,7 +804,7 @@ body::before {
   color: #777;
 }
 
-/* 🔥 RESPONSIVE */
+  
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;

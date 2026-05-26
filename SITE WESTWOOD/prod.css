@@ -13,7 +13,7 @@ body {
   padding-top: 230px;
 }
 
-/* TOP BAR */
+ 
 .top-bar {
   position: fixed;
   top: 0;
@@ -46,12 +46,12 @@ body {
   }
 }
 
-/* HEADER PRINCIPAL */
+ 
 .site-header {
   height: 0;
 }
 
-/* FUNDO BRANCO DO HEADER */
+ 
 .site-header::before {
   content: "";
   position: fixed;
@@ -64,7 +64,7 @@ body {
   pointer-events: none;
 }
 
-/* LOGO */
+ 
 .brand-header {
   position: fixed;
   top: 10px;
@@ -77,7 +77,7 @@ body {
   display: block;
 }
 
-/* MENU PRINCIPAL */
+ 
 .main-nav {
   position: fixed;
   top: 60px;
@@ -105,7 +105,7 @@ body {
   color: rgb(240, 8, 8);
 }
 
-/* ÍCONES NAV DIREITA */
+ 
 .nav-icons {
   position: fixed;
   top: 55px;
@@ -126,12 +126,12 @@ body {
   color: red;
 }
 
-/* PANIER */
+ 
 .cart {
   position: relative;
 }
 
-/* BADGE DO CARRINHO */
+ 
 .cart-count {
   position: absolute;
   top: -8px;
@@ -144,7 +144,7 @@ body {
   border-radius: 50%;
 }
 
-/* MENU DE CATEGORIAS */
+ 
 .category-nav {
   position: fixed;
   top: 105px;
@@ -176,7 +176,7 @@ body {
   color: red;
 }
 
-/* FADE APÓS A BARRA DE CATEGORIAS */
+ 
 body::before {
   content: "";
   position: fixed;
@@ -195,7 +195,7 @@ body::before {
   pointer-events: none;
 }
 
-/* MARGEM PARA NÃO ESCONDER OS TÍTULOS AO CLICAR NAS CATEGORIAS */
+ 
 section {
   scroll-margin-top: 240px;
 }
@@ -204,14 +204,14 @@ footer {
   scroll-margin-top: 80px;
 }
 
-/* CONTAINER */
+ 
 .container {
   padding: 20px 40px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* TÍTULOS */
+ 
 h2 {
   margin-top: 40px;
   margin-bottom: 20px;
@@ -222,7 +222,7 @@ h2 {
   letter-spacing: 0.5px;
 }
 
-/* GRID DE PRODUTOS */
+ 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -230,7 +230,7 @@ h2 {
   margin-bottom: 30px;
 }
 
-/* CARD DO PRODUTO */
+ 
 .produto {
   background: white;
   border-radius: 12px;
@@ -272,7 +272,7 @@ h2 {
   margin-bottom: 12px;
 }
 
-/* BOTÃO DE COMPRAR */
+ 
 .btn-comprar {
   width: 100%;
   background: black;
@@ -295,7 +295,7 @@ h2 {
   transform: scale(0.97);
 }
 
-/* FOOTER */
+ 
 .footer {
   width: 100%;
   background: black;
@@ -394,7 +394,7 @@ h2 {
   color: #777;
 }
 
-/* RESPONSIVIDADE */
+ 
 @media (max-width: 1100px) {
   .main-nav {
     gap: 30px;

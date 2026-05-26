@@ -5,7 +5,7 @@ body {
   padding-top: 30px;
 }
 
-/* TOP BAR */
+ 
 .top-bar {
   position: fixed;
   top: 0;
@@ -32,7 +32,7 @@ body {
   100% { transform: translateX(-100%); }
 }
 
-/* HEADER LOGO IGUAL HOME */
+ 
 .main-header {
   position: fixed;
   top: 30px;
@@ -50,7 +50,7 @@ body {
   left:-20px;
   z-index: 10;
 }
-/* MENU IGUAL HOME */
+ 
 nav {
   position: fixed;
   top: 60px;
@@ -74,7 +74,7 @@ nav a.active {
   color: rgb(240, 8, 8);
 }
 
-/* FADE SOUS LE HEADER IGUAL HOME */
+ 
 body::before {
   content: "";
   position: fixed;
@@ -93,7 +93,7 @@ body::before {
   pointer-events: none;
 }
 
-/* ICONS NAV DROITE IGUAL HOME */
+ 
 .nav-icons {
   position: fixed;
   top: 55px;
@@ -114,7 +114,7 @@ body::before {
   color: red;
 }
 
-/* PANIER */
+ 
 .cart {
   position: relative;
 }
@@ -131,7 +131,7 @@ body::before {
   border-radius: 50%;
 }
 
-/* HERO SOBRE */
+ 
 .hero {
   min-height: 520px;
   padding: 170px 70px 80px;
@@ -175,12 +175,12 @@ body::before {
   color: #ddd;
 }
 
-/* MAIN */
+ 
 main {
   background: white;
 }
 
-/* SECTIONS GRID */
+ 
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -201,7 +201,7 @@ main {
   background: #f5f5f5;
 }
 
-/* TEXTOS */
+ 
 .text-block h2 {
   font-size: 38px;
   margin: 15px 0 25px;
@@ -221,7 +221,7 @@ main {
   margin-bottom: 18px;
 }
 
-/* IMAGENS */
+ 
 .img-block {
   overflow: hidden;
   border-radius: 35px;
@@ -239,7 +239,7 @@ main {
   transform: scale(1.06);
 }
 
-/* FOOTER FULL WIDTH */
+ 
 .footer {
   width: 95%;
   background: black;
@@ -247,7 +247,7 @@ main {
   padding: 10px 40px 20px;
 }
 
-/* CONTENU INTERNE */
+ 
 .footer-container {
   max-width: 1400px;
   margin: auto;
@@ -257,7 +257,7 @@ main {
   gap: 40px;
 }
 
-/* LOGO + TEXTE */
+ 
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -275,14 +275,14 @@ main {
   line-height: 1.5;
 }
 
-/* SOCIALS */
+ 
 .footer-socials {
   display: flex;
   gap: 18px;
   margin-top: 20px;
 }
 
-/* ICÔNES */
+ 
 .footer-socials i {
   font-size: 20px;
   color: #aaa;
@@ -291,21 +291,21 @@ main {
   opacity: 0.7;
 }
 
-/* HOVER PREMIUM */
+ 
 .footer-socials i:hover {
   opacity: 1;
   color: red;
   transform: translateY(-4px) scale(1.2);
 }
 
-/* TITRES */
+ 
 .footer h4 {
   margin-bottom: 15px;
   font-size: 14px;
   letter-spacing: 1px;
 }
 
-/* LIENS */
+ 
 .footer ul {
   list-style: none;
   padding: 0;
@@ -324,7 +324,7 @@ main {
   transform: translateX(3px);
 }
 
-/* PAIEMENT */
+ 
 .footer-payments {
   display: flex;
   align-items: center;
@@ -341,7 +341,7 @@ main {
   border-radius: 4px;
 }
 
-/* BAS FOOTER */
+ 
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
@@ -349,7 +349,7 @@ main {
   color: #777;
 }
 
-/* RESPONSIVE */
+ 
 @media (max-width: 900px) {
   nav {
     gap: 25px;

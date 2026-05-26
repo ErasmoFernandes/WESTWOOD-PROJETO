@@ -46,7 +46,7 @@ struct Venda {
 
 // Função usada para limpar o buffer do teclado
 void limparBuffer() {
-    while(getchar() != '\n');
+    while (getchar() != '\n');
 }
 
 int main() {
